@@ -35,7 +35,7 @@ const ThoughtSchema = new Schema({
         type: String,
         required: 'Thought must contain text!',
         minLength: 1,
-        maxlength: 280
+        maxLength: 280
     },
     createdAt: {
         type: Date,

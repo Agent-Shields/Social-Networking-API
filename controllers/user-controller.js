@@ -15,6 +15,11 @@ const userController = {
         // get single user by _id and poplated thought and friend data
             getUserById({ params }, res) {
                 User.findOne({ _id: params.id})
+                .populate({
+                    path: 'thoughts',
+                    select: '-__v'
+                })
+                .select('-__v')
                 .then(dbUserData => res.json(dbUserData))
                 .catch(err => res.json(err))
             },
@@ -46,7 +51,7 @@ const userController = {
     // /api/users/:userId/friends/:friendId
     
         // post to add new friend to user's friend list
-
+            
         // Delete to remove friend from user's friend list
 }
 

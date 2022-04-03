@@ -10,10 +10,15 @@ const UserSchema = new Schema({
     email: {
         type: String,
         required: 'Email is required!',
+        unique: true,
         match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, 'Please enter a valid e-mail address!']
     },
     thoughts: [
         // arr _id values ref Thought model
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Thought'
+        }
     ],
     friends: [
         //arr _id values ref User model (Self reference)
@@ -23,7 +28,7 @@ const UserSchema = new Schema({
         toJSON: {
             virtuals: true
         },
-        id: true
+        id: false
     }
 )
 
