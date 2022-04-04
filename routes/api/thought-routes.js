@@ -15,6 +15,13 @@ router
     .route('/')
         .get(getAllThoughts)
     
+
+// /api/thoughts/:thoughtId/reactions
+router
+    .route('/:thoughtId/reactions')
+        .post(addReaction)
+        .delete(removeReaction)
+
 // /api/thoughts/<userId>
 router
     .route('/:userId')
@@ -26,12 +33,6 @@ router
         .get(getThoughtById)
         .put(updateThought)
         .delete(removeThought)
-
-// /api/thoughts/:thoughtId/reactions
-router
-    .route('/:thoughtId/reactions')
-        .post(addReaction)
-        .delete(removeReaction)
 
 // /api/thoughts/:thoughtId/reactions/:reactionId
 // router
