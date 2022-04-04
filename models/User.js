@@ -22,6 +22,10 @@ const UserSchema = new Schema({
     ],
     friends: [
         //arr _id values ref User model (Self reference)
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        }
     ]
 },
     {
