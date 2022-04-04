@@ -7,6 +7,7 @@ Use MongoDB, express.js and the mongoose ODM to prepare the API required for a s
 https://github.com/Agent-Shields/Social-Networking-API
 
 ## Walkthrough Video Link
+https://drive.google.com/file/d/1llpWziTOWnsTpkXm8AIBZeSyA8CqrE1f/view
 
 ## Acceptance Criteria
 GIVEN a social network API : 
